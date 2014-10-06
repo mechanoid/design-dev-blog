@@ -1,0 +1,41 @@
+@require '../moleculares/stroke-icon'
+footer-vert-distance = 1.154em
+
+.footer-nav
+  border-top 1px solid ft-main
+  padding-top footer-vert-distance
+  padding-bottom footer-vert-distance
+
+  margin-top 2em
+  margin-bottom 3em
+  overflow hidden
+
+  a
+    font-family "Source Sans Pro", Verdana, Geneva, Tahoma, sans-serif
+    color ft-main
+    font-size 1.8em
+    font-weight 200
+
+    padding .3em .5em
+
+    &:hover
+      color #fff
+      background-color link-bg-color-hover
+      border-radius 3px
+      transition .15s linear background-color
+
+  .prev-link
+    float left
+
+    &:before
+      stroke-icon()
+      content: "\e687"
+      margin-right icon-distance
+
+  .next-link
+    float right
+
+    &:after
+      stroke-icon()
+      content: "\e685"
+      margin-left icon-distance

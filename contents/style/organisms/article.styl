@@ -1,0 +1,30 @@
+article-headline-size = 2em
+article-headline-size-vpw = 3vw
+article-top-distance = 4em
+
+.article
+  margin-top article-top-distance
+
+  .article-detail &
+    margin-top article-top-distance*.5
+
+
+  header
+    h1
+      font-size article-headline-size
+      font-size article-headline-size-vpw
+
+      text-align left
+
+      +below(700px)
+        font-size article-headline-size
+
+  p
+    margin-bottom 2em
+
+  code
+    margin-bottom 3em
+
+  .code-note
+    margin-top .8em
+    margin-bottom .3em

@@ -1,0 +1,27 @@
+extends layout
+
+
+block content
+
+  include author
+  each article in articles
+
+    article.article.intro
+      header
+        h1
+          a(href=article.url)= article.title
+        p.article-date
+          span= moment.utc(article.date).format('DD. MMMM YYYY')
+      .content
+        section.content!= typogr(article.html).typogrify()
+
+        p.more-link
+          a(href=article.url) direct link
+
+block prepend footer
+  div.footer-nav
+    if prevPage
+      a(href=prevPage.url, class="prev-link") newer
+
+    if nextPage
+      a(href=nextPage.url, class="next-link") older
